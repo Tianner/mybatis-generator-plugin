@@ -305,6 +305,8 @@ public class MybatisGenerateUtil {
      */
     public static void setJavaRootPath(String javaRootPath) {
         MybatisGenerateUtil.javaRootPath = javaRootPath;
+        MybatisGenerateUtil.modelTargetPackage = javaRootPath+SPOT+modelPackageName;
+        MybatisGenerateUtil.iDaoTargetPackage = javaRootPath+SPOT+mapperPackageName;
     }
 
     /**
