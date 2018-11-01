@@ -17,7 +17,7 @@
 	<dependency>
 			<groupId>com.github.Tianner</groupId>
 			<artifactId>mybatis-generator-plugin</artifactId>
-			<version>1.4</version>
+			<version>1.5</version>
 	</dependency>
 	
     <repositories>
