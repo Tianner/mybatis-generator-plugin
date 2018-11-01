@@ -12,7 +12,7 @@ package com.icare.generator;
 
 public class Test {
 
-    public static void main(String[] args) {
+    public static void demo(String[] args) {
         MybatisGenerateUtil.setDbUrl("127.0.0.1:3306");
         MybatisGenerateUtil.setDbName("t_bracelet");
         MybatisGenerateUtil.setTableName("t_bracelet_red_packet_water");
