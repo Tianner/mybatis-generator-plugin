@@ -6,7 +6,7 @@
 
     <groupId>com.icare</groupId>
     <artifactId>mybatis-generate-plugins</artifactId>
-    <version>1.0</version>
+    <version>1.5</version>
     <packaging>jar</packaging>
 
     <dependencies>
