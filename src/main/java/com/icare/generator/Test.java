@@ -28,9 +28,9 @@ public class Test {
         MybatisGenerateUtil.setGenerateExtMapper(true);
 
         MybatisGenerateUtil.setInsertStatementEnabled(true);
-        MybatisGenerateUtil.setSelectByPrimaryKeyStatementEnabled(false);
-        MybatisGenerateUtil.setUpdateByPrimaryKeyStatementEnabled(false);
-        MybatisGenerateUtil.setDeleteByPrimaryKeyStatementEnabled(false);
+        MybatisGenerateUtil.setSelectByPrimaryKeyStatementEnabled(true);
+        MybatisGenerateUtil.setUpdateByPrimaryKeyStatementEnabled(true);
+        MybatisGenerateUtil.setDeleteByPrimaryKeyStatementEnabled(true);
 
         MybatisGenerateUtil.setSelectByExampleStatementEnabled(false);
         MybatisGenerateUtil.setUpdateByExampleStatementEnabled(false);
