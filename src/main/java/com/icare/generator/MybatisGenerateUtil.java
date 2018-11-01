@@ -77,6 +77,16 @@ public class MybatisGenerateUtil {
     private static Boolean addRemarkComments = true;
     private static Boolean createSetGet = true;
     private static Boolean generateExtMapper = false;
+
+    private static Boolean insertStatementEnabled = true;
+    private static Boolean selectByPrimaryKeyStatementEnabled = true;
+    private static Boolean updateByPrimaryKeyStatementEnabled = true;
+    private static Boolean deleteByPrimaryKeyStatementEnabled = true;
+
+    private static Boolean selectByExampleStatementEnabled = false;
+    private static Boolean updateByExampleStatementEnabled = false;
+    private static Boolean deleteByExampleStatementEnabled = false;
+    private static Boolean countByExampleStatementEnabled = false;
     //作者
     private static String author = "admin";
     private static String version = "1.0";
@@ -188,11 +198,15 @@ public class MybatisGenerateUtil {
                         && !"".equals(entityArr[count]))
                         ?entityArr[count]:tableToBean(tableName);
                 tableConfiguration.setDomainObjectName(bean);
-                tableConfiguration.setCountByExampleStatementEnabled(false);
-                tableConfiguration.setUpdateByExampleStatementEnabled(false);
-                tableConfiguration.setDeleteByExampleStatementEnabled(false);
-                tableConfiguration.setSelectByExampleStatementEnabled(false);
-                tableConfiguration.setSelectByExampleQueryId("false");
+                tableConfiguration.setInsertStatementEnabled(insertStatementEnabled);
+                tableConfiguration.setSelectByPrimaryKeyStatementEnabled(selectByPrimaryKeyStatementEnabled);
+                tableConfiguration.setUpdateByPrimaryKeyStatementEnabled(updateByPrimaryKeyStatementEnabled);
+                tableConfiguration.setDeleteByPrimaryKeyStatementEnabled(deleteByPrimaryKeyStatementEnabled);
+
+                tableConfiguration.setCountByExampleStatementEnabled(countByExampleStatementEnabled);
+                tableConfiguration.setUpdateByExampleStatementEnabled(updateByExampleStatementEnabled);
+                tableConfiguration.setDeleteByExampleStatementEnabled(deleteByExampleStatementEnabled);
+                tableConfiguration.setSelectByExampleStatementEnabled(selectByExampleStatementEnabled);
                 list.add(tableConfiguration);
                 count++;
             }
@@ -388,6 +402,70 @@ public class MybatisGenerateUtil {
      */
     public static void setSuppressAllComments(Boolean suppressAllComments) {
         MybatisGenerateUtil.suppressAllComments = suppressAllComments;
+    }
+
+    /**
+     * 设置是否生成insert方法
+     * @param insertStatementEnabled
+     */
+    public static void setInsertStatementEnabled(Boolean insertStatementEnabled) {
+        MybatisGenerateUtil.insertStatementEnabled = insertStatementEnabled;
+    }
+
+    /**
+     *SelectByPrimaryKey方法
+     * @param selectByPrimaryKeyStatementEnabled
+     */
+    public static void setSelectByPrimaryKeyStatementEnabled(Boolean selectByPrimaryKeyStatementEnabled) {
+        MybatisGenerateUtil.selectByPrimaryKeyStatementEnabled = selectByPrimaryKeyStatementEnabled;
+    }
+
+    /**
+     * UpdateByPrimaryKey方法
+     * @param updateByPrimaryKeyStatementEnabled
+     */
+    public static void setUpdateByPrimaryKeyStatementEnabled(Boolean updateByPrimaryKeyStatementEnabled) {
+        MybatisGenerateUtil.updateByPrimaryKeyStatementEnabled = updateByPrimaryKeyStatementEnabled;
+    }
+
+    /**
+     * DeleteByPrimaryKey方法
+     * @param deleteByPrimaryKeyStatementEnabled
+     */
+    public static void setDeleteByPrimaryKeyStatementEnabled(Boolean deleteByPrimaryKeyStatementEnabled) {
+        MybatisGenerateUtil.deleteByPrimaryKeyStatementEnabled = deleteByPrimaryKeyStatementEnabled;
+    }
+
+    /**
+     * SelectByExample方法
+     * @param selectByExampleStatementEnabled
+     */
+    public static void setSelectByExampleStatementEnabled(Boolean selectByExampleStatementEnabled) {
+        MybatisGenerateUtil.selectByExampleStatementEnabled = selectByExampleStatementEnabled;
+    }
+
+    /**
+     * UpdateByExample方法
+     * @param updateByExampleStatementEnabled
+     */
+    public static void setUpdateByExampleStatementEnabled(Boolean updateByExampleStatementEnabled) {
+        MybatisGenerateUtil.updateByExampleStatementEnabled = updateByExampleStatementEnabled;
+    }
+
+    /**
+     * DeleteByExample方法
+     * @param deleteByExampleStatementEnabled
+     */
+    public static void setDeleteByExampleStatementEnabled(Boolean deleteByExampleStatementEnabled) {
+        MybatisGenerateUtil.deleteByExampleStatementEnabled = deleteByExampleStatementEnabled;
+    }
+
+    /**
+     * CountByExample方法
+     * @param countByExampleStatementEnabled
+     */
+    public static void setCountByExampleStatementEnabled(Boolean countByExampleStatementEnabled) {
+        MybatisGenerateUtil.countByExampleStatementEnabled = countByExampleStatementEnabled;
     }
 }
 

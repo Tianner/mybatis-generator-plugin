@@ -12,26 +12,30 @@ package com.icare.generator;
 
 public class Test {
 
-    public static void demo(String[] args) {
+    public static void main(String[] args) {
         MybatisGenerateUtil.setDbUrl("127.0.0.1:3306");
-        MybatisGenerateUtil.setDbName("t_bracelet");
-        MybatisGenerateUtil.setTableName("t_bracelet_red_packet_water");
         MybatisGenerateUtil.setUserId("root");
         MybatisGenerateUtil.setPassword("123456");
-        //可缺省
-        MybatisGenerateUtil.setAuthor("田海波");
-        //可缺省
-        MybatisGenerateUtil.setVersion("1.5");
-        MybatisGenerateUtil.setEntity("RedPacketWater");
+        MybatisGenerateUtil.setDbName("t_bracelet");
+        MybatisGenerateUtil.setTableName("t_bracelet_red_packet_water");
+        MybatisGenerateUtil.setEntity("RedPacket1Water");
         MybatisGenerateUtil.setJavaRootPath("com.icare.bracelet");
-        //可缺省
+        MybatisGenerateUtil.setAuthor("田海波");
+        MybatisGenerateUtil.setVersion("1.5");
         MybatisGenerateUtil.setAddRemarkComments(true);
-        //可缺省
         MybatisGenerateUtil.setSuppressAllComments(false);
-        //可缺省
         MybatisGenerateUtil.setGenerateSetGet(false);
-        //可缺省
         MybatisGenerateUtil.setGenerateExtMapper(true);
+
+        MybatisGenerateUtil.setInsertStatementEnabled(true);
+        MybatisGenerateUtil.setSelectByPrimaryKeyStatementEnabled(false);
+        MybatisGenerateUtil.setUpdateByPrimaryKeyStatementEnabled(false);
+        MybatisGenerateUtil.setDeleteByPrimaryKeyStatementEnabled(false);
+
+        MybatisGenerateUtil.setSelectByExampleStatementEnabled(false);
+        MybatisGenerateUtil.setUpdateByExampleStatementEnabled(false);
+        MybatisGenerateUtil.setCountByExampleStatementEnabled(false);
+        MybatisGenerateUtil.setCountByExampleStatementEnabled(false);
         MybatisGenerateUtil.doGenerateCode();
     }
 }
