@@ -38,4 +38,19 @@ public class Test {
         MybatisGenerateUtil.setCountByExampleStatementEnabled(false);
         MybatisGenerateUtil.doGenerateCode();
     }
+
+    public static void min() {
+        MybatisGenerateUtil.setDbUrl("127.0.0.1:3306");
+        MybatisGenerateUtil.setUserId("root");
+        MybatisGenerateUtil.setPassword("123456");
+        MybatisGenerateUtil.setDbName("t_bracelet");
+        MybatisGenerateUtil.setTableName("t_bracelet_red_packet_water");
+        MybatisGenerateUtil.setEntity("RedPacket1Water");
+        MybatisGenerateUtil.setJavaRootPath("com.icare.bracelet");
+        MybatisGenerateUtil.setAuthor("田海波");
+        MybatisGenerateUtil.setVersion("1.5");
+        MybatisGenerateUtil.setGenerateSetGet(false);
+        MybatisGenerateUtil.setGenerateExtMapper(true);
+        MybatisGenerateUtil.doGenerateCode();
+    }
 }

@@ -17,7 +17,7 @@
 	<dependency>
 			<groupId>com.github.Tianner</groupId>
 			<artifactId>mybatis-generator-plugin</artifactId>
-			<version>1.5</version>
+			<version>1.6</version>
 	</dependency>
 	
     <repositories>
@@ -29,7 +29,7 @@
 
 ```
     2、拷贝执行示例代码
-    在项目中任意类中创建main函数，拷贝依赖包中的com.icare.generator.Test类中的demo函数中的示例代码
+    在项目中任意类中创建min函数（或者main函数），拷贝依赖包中的com.icare.generator.Test类中的demo函数中的示例代码
     如下：
      
 ```
