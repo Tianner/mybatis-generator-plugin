@@ -17,7 +17,7 @@
 	<dependency>
 			<groupId>com.github.Tianner</groupId>
 			<artifactId>mybatis-generator-plugin</artifactId>
-			<version>1.6</version>
+			<version>1.7</version>
 	</dependency>
 	
     <repositories>
@@ -42,6 +42,10 @@
         MybatisGenerateUtil.setTableName("t_bracelet_red_packet_water");
         MybatisGenerateUtil.setEntity("RedPacketWater");
         MybatisGenerateUtil.setJavaRootPath("com.icare.bracelet");
+        //配置是否要生成get和set方法
+        MybatisGenerateUtil.setGenerateSetGet(true);
+        //配置是否要生成ExtMaper文件
+        MybatisGenerateUtil.setGenerateExtMapper(true);
         MybatisGenerateUtil.doGenerateCode();
     }
     
