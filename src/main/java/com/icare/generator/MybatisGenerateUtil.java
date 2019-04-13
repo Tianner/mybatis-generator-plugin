@@ -329,6 +329,7 @@ public class MybatisGenerateUtil {
      */
     public static void setDbUrl(String dbUrl) {
         MybatisGenerateUtil.dbUrl = dbUrl;
+        MybatisGenerateUtil.connectionURL = "jdbc:mysql://"+dbUrl+"/"+dbName+"?useSSL=false";
     }
 
     /**
