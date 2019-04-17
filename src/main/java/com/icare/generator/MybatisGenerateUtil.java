@@ -97,6 +97,7 @@ public class MybatisGenerateUtil {
     @SuppressWarnings({"unchecked", "rawtypes"})
     public static void doGenerateCode() {
         try {
+            refreshConfig();
             Configuration config = new Configuration();
             Context context = new Context(null);
             context.setId("MysqlTables");
@@ -297,6 +298,11 @@ public class MybatisGenerateUtil {
         context.setJdbcConnectionConfiguration(jdbc);
     }
 
+    private static void refreshConfig(){
+        connectionURL = "jdbc:mysql://"+dbUrl+"/"+dbName+"?useSSL=false";
+        modelTargetPackage = javaRootPath+SPOT+modelPackageName;
+        iDaoTargetPackage = javaRootPath+SPOT+mapperPackageName;
+    }
     /**
      * 设置要读取得数据库表名，如：t_user，(当有多个表需要生成时，表名之间以英文逗号隔开集合，注意表名顺序和实体类名顺序的对应)
      * @param tableName
@@ -329,7 +335,6 @@ public class MybatisGenerateUtil {
      */
     public static void setDbUrl(String dbUrl) {
         MybatisGenerateUtil.dbUrl = dbUrl;
-        MybatisGenerateUtil.connectionURL = "jdbc:mysql://"+dbUrl+"/"+dbName+"?useSSL=false";
     }
 
     /**
