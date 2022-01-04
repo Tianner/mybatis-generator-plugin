@@ -299,7 +299,7 @@ public class MybatisGenerateUtil {
     }
 
     private static void refreshConfig(){
-        connectionURL = "jdbc:mysql://"+dbUrl+"/"+dbName+"?useSSL=false";
+        connectionURL = "jdbc:mysql://"+dbUrl+"/"+dbName+"?useSSL=false&allowPublicKeyRetrieval=true";
         modelTargetPackage = javaRootPath+SPOT+modelPackageName;
         iDaoTargetPackage = javaRootPath+SPOT+mapperPackageName;
     }
